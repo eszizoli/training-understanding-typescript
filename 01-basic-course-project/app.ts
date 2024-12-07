@@ -1,7 +1,10 @@
+type Combinable = number | string;
+type ConversionDescriptor = 'as-number' | 'as-text';
+
 function combine (
-  input1: number | string,
-  input2: number | string,
-  resultConversion: 'as-number' | 'as-text'
+  input1: Combinable,
+  input2: Combinable,
+  resultConversion: ConversionDescriptor
 ) {
   let result;
   if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
@@ -21,3 +24,9 @@ console.log(combineStringAges);
 
 const combineNames = combine('Max', 'Anna', 'as-text');
 console.log(combineNames);
+
+// Type aliases can be use to "create" own types.
+type User = { name: string, age: number };
+
+const user: User = { name: 'Joe', age: 32 };
+console.log('Hi, I am ' + user.name);
