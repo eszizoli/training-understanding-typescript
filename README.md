@@ -43,3 +43,19 @@ Initizite a TypeScript project: `tsc --init`
 - the init command will generate a TypeScript project config file: `tsconfig.json`
 - to compile all *.ts file in TypeScipt project: `tsc`
 - watch mode: `tsc -w`
+
+### TypeScript configuration - tsconfig.json
+
+- exclude files: `"exclude" : [ "**/*.dev.ts", "analytics.dev.ts" ]`
+  - "node_modules" is excluded by default
+- include files `"include" : [ "app.ts" ]`
+  - additional included files
+  - **/*.ts files are included by default
+
+#### Compiler options (`"compilerOptions": { ... } `)
+
+- **target**: JavaScript version to compile
+  - ES5 (default) is an older version (ECMAScript 5 - 2009), but it is compatible with IE
+  - ES6 is newer JavaScript version (ECMAScript 2015), all modern browser support it (not compatible with IE)
+  - for more info about [JavaScript Versions](https://www.w3schools.com/Js/js_versions.asp)
+ 
