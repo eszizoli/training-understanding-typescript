@@ -58,4 +58,8 @@ Initizite a TypeScript project: `tsc --init`
   - ES5 (default) is an older version (ECMAScript 5 - 2009), but it is compatible with IE
   - ES6 is newer JavaScript version (ECMAScript 2015), all modern browser support it (not compatible with IE)
   - for more info about [JavaScript Versions](https://www.w3schools.com/Js/js_versions.asp)
- 
+- **module**: (later...)
+- **lib**: specify libraries to be included
+  - if it not specified, the compiler will include all library related to target JavaScript version
+  - e.g.: `"dom"`: acces to document, console, etc.
+  - default setup for ES6: `"lib": [ "dom", "es6", "dom.iterable", "scripthost" ]`
